@@ -1,0 +1,28 @@
+
+/* lembrando sempre que estou dentro do body*/
+{% include "global/partials/head.html" %}
+{% include "global/partials/menu.html" %}
+
+{% if text %}
+    <h1>{% block texto %} BASE {% endblock texto %}</h1>
+{% endif %}
+
+
+
+<main class="content">
+    {% block posts %} BASE {% endblock posts %}
+    {% block home %}{% endblock home %}
+
+</main>
+
+
+
+</body>
+</html>
+
+/* a ideia não é ficar duplicando essa parte do 'article' mas sim usar um 'partial' */
+/* porque com o 'partial' eu consigo duplicar somente a linha do 'partial'*/
+/* eu uso somente 1 'article' lá no 'postblock.html' que está no 'partials' */
+/* depois com o 'include' eu façoo link desse arquivo aqui */
+/* dessa fomra eu posso duplicar somente essa linha quantas vezes eu quiser */
+/* ao invés de replicar o bloco inteiro */
